@@ -5,8 +5,8 @@ This project is a fulfillment pricing auditor for ShipPlug. It allows users to u
 ## Getting Started
 
 1. Clone this repository
-2. Install dependencies with `npm install`
-3. Start the development server with `npm start`
+2. Install dependencies with `pip install -r requirements.txt`
+3. Run the Streamlit app with `streamlit run shipplug_audit.py`
 
 ## Features
 
@@ -14,12 +14,31 @@ This project is a fulfillment pricing auditor for ShipPlug. It allows users to u
 - Generate sample audit data
 - View detailed analysis of pricing discrepancies
 - Visualize data with interactive charts
+- Displays ShipPlug logo
+
+## Project Structure
+
+```
+ShipPlug-Audit/
+├── shipplug_audit.py
+├── requirements.txt
+└── README.md
+```
 
 ## Technologies Used
 
-- React
-- Recharts for data visualization
-- Tailwind CSS for styling
+- Python
+- Streamlit for the web application
+- Pandas for data manipulation
+- Plotly for data visualization
+
+## Deploying to Streamlit Sharing
+
+1. Push your code to a GitHub repository
+2. Go to [streamlit.io/sharing](https://streamlit.io/sharing)
+3. Login with your GitHub account
+4. Select your repository, branch, and the main Python file
+5. Click "Deploy"
 
 ## Contributing
 
