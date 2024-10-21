@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import shipPlugLogo from './assets/shipplug-logo.png';
 
 const generateLargeDataset = () => {
   const shippingTypes = ['standard', 'express', 'overnight', 'international'];
@@ -60,7 +61,7 @@ const InputPage = ({ onAudit }) => (
   <Card className="w-full max-w-4xl mx-auto">
     <CardHeader className="flex flex-row items-center justify-between">
       <img 
-        src="/api/placeholder/400/320" 
+        src={shipPlugLogo}
         alt="ShipPlug Logo" 
         className="w-40 h-auto" 
       />
@@ -69,8 +70,16 @@ const InputPage = ({ onAudit }) => (
     <CardContent>
       <p className="mb-4">Upload your fulfillment pricing files here. Or click "Audit" to see a sample analysis.</p>
       <div className="space-y-4">
-        <input type="file" className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
-        <input type="file" className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+        <input 
+          type="file" 
+          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" 
+          accept=".csv,.xlsx,.xls" // Add accepted file types
+        />
+        <input 
+          type="file" 
+          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" 
+          accept=".csv,.xlsx,.xls" // Add accepted file types
+        />
         <Button onClick={onAudit} className="w-full">Audit</Button>
       </div>
     </CardContent>
