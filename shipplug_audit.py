@@ -4,12 +4,12 @@ import numpy as np
 import plotly.express as px
 
 # Set page configuration
-st.set_page_config(page_title="ShipPlug Audit", layout="wide")
+st.set_page_config(page_title="Fulfillment Audit", layout="wide")
 
 # Display logo
 st.image("https://raw.githubusercontent.com/yourusername/ShipPlug-Audit/main/src/assets/shipplug-logo.png", width=200)
 
-st.title("ShipPlug Fulfillment Pricing Audit")
+st.title("Fulfillment Pricing Audit")
 
 # File upload
 st.subheader("Upload your fulfillment pricing files")
